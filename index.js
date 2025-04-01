@@ -1,5 +1,6 @@
 const Gpio = require('onoff').Gpio;
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000;
 const relay1 = new Gpio(529, 'out')
@@ -11,13 +12,11 @@ const relay6 = new Gpio(528, 'out')
 const relay7 = new Gpio(532, 'out')
 const relay8 = new Gpio(533, 'out')
 
-app.get('/', (req, res) =>{
-    res.send('Hello Express');
-})
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.listen(3000, () =>{
-
-})
+app.listen(port, () =>{
+    console.log(`Server is running at http://localhost:${port})`)
+});
  
 
 
