@@ -14,6 +14,11 @@ const relay8 = new Gpio(533, 'out')
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.post('/gpio/on', (req, res) =>{
+    relay1.writeSync(1);
+    res.send("Aux1 is On")
+})
+
 app.listen(port, () =>{
     console.log(`Server is running at http://localhost:${port})`)
 });
