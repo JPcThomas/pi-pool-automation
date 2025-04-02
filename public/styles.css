@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+h1 {
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2.5rem;
+        color: #ffffff; /* White text */
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        background: linear-gradient(90deg, #0d47a1, #1976d2, #2196f3); /* Gradient background */
+        padding: 10px 20px; /* Space around the text */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for a 3D effect */
+        display: inline-block; /* Ensures the logo doesn't stretch */
+    }
+    
+}
+
+#auxiliarys {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#auxiliarys button {
+    padding: 20px 40px; /* Consistent size with Pool/Spa buttons */
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2196f3; /* Blue */
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}

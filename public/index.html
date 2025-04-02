@@ -3,37 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPIO Control</title>
+    <title>Pool and Spa Automation</title>
+    <link rel="stylesheet" href="styles.css"></link>
 </head>
 <body>
-    <h1>GPIO Control Interface</h1>
-    <p>Click the buttons below to control the GPIO pins:</p>
+    
+    <h1>Pool and Spa Automation</h1>
+    <div id="auxiliarys">   
+        <button id="relay1">Pool</button>
+        <button id="relay2">Spa</button>
+        <button id="relay3">Relay 3</button>
+        <button id="relay4">Relay 4</button>
+        <button id="relay5">Relay 5</button>
+        <button id="relay6">Relay 6</button>
+        <button id="relay7">Relay 7</button>
+        <button id="relay8">Relay 8</button>
+    </div>
 
-    <button id="relay1">Relay 1</button>
-    <button id="relay2">Relay 2</button>
-    <button id="relay3">Relay 3</button>
-    <button id="relay4">Relay 4</button>
-    <button id="relay5">Relay 5</button>
-    <button id="relay6">Relay 6</button>
-    <button id="relay7">Relay 7</button>
-    <button id="relay8">Relay 8</button>
-</body>
 <footer>
-    <script>
-        const relay1 = document.getElementById('relay1');
-        const relay2 = document.getElementById('relay2');
-        const relay3 = document.getElementById('relay3');
-        const relay4 = document.getElementById('relay4');
-        const relay5 = document.getElementById('relay5');
-        const relay6 = document.getElementById('relay6');
-        const relay7 = document.getElementById('relay7');
-        const relay8 = document.getElementById('relay8');
-
-        relay1.addEventListener('click', turnOnAux1());
-
-        async function turnOnAux1() {
-            await fetch('http://192.168.0.90:3000/gpio/on', {method: 'POST'})
-        }
-    </script>
+    <script src="app.js"></script>
 </footer>
+</body>
 </html>
