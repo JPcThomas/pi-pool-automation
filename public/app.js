@@ -6,8 +6,26 @@ const relay5 = document.getElementById('relay5');
 const relay6 = document.getElementById('relay6');
 const relay7 = document.getElementById('relay7');
 const relay8 = document.getElementById('relay8');
-
+const relay1indicator = document.getElementById('relay1indicator');
 relay1.addEventListener('click', turnOnAux1);
+relay2.addEventListener('click', turnOnAux2);
+relay3.addEventListener('click', turnOnAux3);
+relay4.addEventListener('click', turnOnAux4);
+relay5.addEventListener('click', turnOnAux5);
+relay6.addEventListener('click', turnOnAux6);
+relay7.addEventListener('click', turnOnAux7);
+
+let isLightOn = false;
+relay1.addEventListener('click', ()=>{
+    if(isLightOn){
+        relay1indicator.style.background = "";
+        isLightOn = false;
+    }
+    else{
+        relay1indicator.style.background = "radial-gradient(circle, rgba(105, 196, 20, 0.75), rgba(105, 196, 45, 0.73), rgba(105, 196, 52, 0.52))";
+        isLightOn = true;
+    }
+});
 relay2.addEventListener('click', turnOnAux2);
 relay3.addEventListener('click', turnOnAux3);
 relay4.addEventListener('click', turnOnAux4);
@@ -63,3 +81,4 @@ async function turnOnAux8(){
     const data = await response.text();
     console.log('Backend Response:', data);
 }
+

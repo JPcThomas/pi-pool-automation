@@ -3,14 +3,14 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
-const relay1 = new Gpio(529, 'out');
-const relay2 = new Gpio(539, 'out');
-const relay3 = new Gpio(534, 'out');
-const relay4 = new Gpio(535, 'out');
-const relay5 = new Gpio(536, 'out');
-const relay6 = new Gpio(528, 'out');
-const relay7 = new Gpio(532, 'out');
-const relay8 = new Gpio(533, 'out');
+const relay1 = new Gpio(529, 'out'); //gpio17 out hi
+const relay2 = new Gpio(539, 'out'); //gpio27 out hi
+const relay3 = new Gpio(534, 'out'); //gpio22 out hi
+const relay4 = new Gpio(535, 'out'); //gpio23 out hi
+const relay5 = new Gpio(536, 'out'); //gpio24 out hi
+const relay6 = new Gpio(528, 'out'); //gpio16 out hi
+const relay7 = new Gpio(532, 'out'); //gpio20 out hi
+const relay8 = new Gpio(533, 'out'); //gpio21 out hi
 
 relay1.writeSync(1);
 relay2.writeSync(1);
@@ -65,6 +65,7 @@ app.post('/aux3', (req, res) =>{
         else{
             relay3.writeSync(1);
         }
+        res.send(isAux3On?"Aux3 is On":"Aux3 is off");
 })
 app.post('/aux4', (req, res) =>{
     console.log("recieved request at aux4");
@@ -75,6 +76,7 @@ app.post('/aux4', (req, res) =>{
         else{
             relay4.writeSync(1);
         }
+        res.send(isAux4On?"Aux4 is On":"Aux4 is off");
 })
 app.post('/aux5', (req, res) =>{
     console.log("recieved request at aux5");
@@ -85,6 +87,7 @@ app.post('/aux5', (req, res) =>{
         else{
             relay5.writeSync(1);
         }
+        res.send(isAux5On?"Aux5 is On":"Aux5 is off");
 })
 app.post('/aux6', (req, res) =>{
     console.log("recieved request at aux6");
@@ -95,6 +98,7 @@ app.post('/aux6', (req, res) =>{
         else{
             relay6.writeSync(1);
         }
+        res.send(isAux6On?"Aux6 is On":"Aux6 is off");
 })
 app.post('/aux7', (req, res) =>{
     console.log("recieved request at aux7");
@@ -105,6 +109,7 @@ app.post('/aux7', (req, res) =>{
         else{
             relay7.writeSync(1);
         }
+        res.send(isAux7On?"Aux7 is On":"Aux7 is off");
 })
 app.post('/aux8', (req, res) =>{
     console.log("recieved request at aux8");
@@ -115,6 +120,7 @@ app.post('/aux8', (req, res) =>{
         else{
             relay8.writeSync(1);
         }
+        res.send(isAux8On?"Aux8 is On":"Aux8 is off");
 })
 app.listen(port, () =>{
     console.log(`Server is running at http://localhost:${port})`)

@@ -5,21 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pool and Spa Automation</title>
     <link rel="stylesheet" href="styles.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <h1>Pool and Spa Automation</h1>
-    <div id="auxiliarys">   
-        <button id="relay1">Pool</button>
-        <button id="relay2">Spa</button>
-        <button id="relay3">Relay 3</button>
-        <button id="relay4">Relay 4</button>
-        <button id="relay5">Relay 5</button>
-        <button id="relay6">Relay 6</button>
-        <button id="relay7">Relay 7</button>
-        <button id="relay8">Relay 8</button>
-    </div>
-
+        <div id="auxiliarys"> 
+            <div class="button-container">
+                <button id="relay1">Pool</button>
+                <div id="relay1indicator" class="indicator-light"></div>
+            </div>
+            <div class="button-container">
+                <button id="relay2">Spa</button>
+                <div id="relay2indicator" class="indicator-light"></div>
+            </div>
+            <div class="button-container">
+                <button id="relay3">Jet Pump</button>
+                <div id="relay3indicator" class="indicator-light"></div>
+            </div>
+            <div class="button-container">
+                <button id="relay4">Pool Light</button>
+                <div id="relay4indicator" class="indicator-light"></div>
+            </div>
+            <div class="button-container">
+                <button id="relay5">Spa Light</button>
+                <div id="relay5indicator" class="indicator-light"></div>
+            </div>
+            <div class="button-container">
+                <button id="relay6">Relay 6</button>
+                <div id="relay6indicator" class="indicator-light"></div>
+            </div>
+            <div class="button-container">
+                <button id="relay7" class="toggle-button">Relay 7</button>
+                <div id="relay7indicator"class="indicator-light"></div>
+            </div>
+            <div class="button-container">
+                <button id="relay8" class="toggle-button">Heater</button>
+                <div id="relay8indicator" class="indicator-light"></div>
+            </div>
+        </div>
 <footer>
     <script src="app.js"></script>
 </footer>
